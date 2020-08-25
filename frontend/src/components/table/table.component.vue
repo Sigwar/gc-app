@@ -33,6 +33,7 @@ export default {
             padding: .5rem 1rem;
             background: none;
             max-height: 5rem;
+            font-weight: 800;
           }
         }
       }
@@ -53,6 +54,7 @@ export default {
         padding: 1rem;
         font-size: 1.7rem;
         color: var(--font-color);
+        font-weight: 600;
       }
     }
   }

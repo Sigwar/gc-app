@@ -27,7 +27,7 @@
     <div class="gc-filters__button"
          v-if="showButton">
 
-      <gc-button>Create new Employee</gc-button>
+      <gc-button>{{ buttonLabel }}</gc-button>
     </div>
   </div>
 </template>
@@ -45,6 +45,7 @@ export default defineComponent({
     showSearch: Boolean,
     showCheckboxes: Boolean,
     showButton: Boolean,
+    buttonLabel: String,
   },
   components: {
     gcInput,

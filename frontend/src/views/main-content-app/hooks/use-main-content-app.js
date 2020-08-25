@@ -7,6 +7,11 @@ export const useMainContentApp = () => {
 
   const setActiveLink = (nameClass) => {
     activeLink.value = nameClass;
+    if (nameClass === 'active-employees') {
+      router.push({ name: 'Employees list' });
+    } else {
+      router.push({ name: 'Projects list' });
+    }
   };
 
   const logOut = () => {

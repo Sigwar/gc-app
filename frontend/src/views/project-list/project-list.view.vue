@@ -1,36 +1,35 @@
 <template>
-  <div class="gc-employee-list">
+  <div class="gc-project-list">
 
     <gc-filters :search-valie="valueInput"
                 :show-button="true"
-                :show-checkboxes="true"
+                :show-checkboxes="false"
                 :show-search="true"
                 @change-search="changeSearch"
-                button-label="Create new employee"></gc-filters>
+                button-label="Create new project"></gc-filters>
 
-    <gc-employee-list-table></gc-employee-list-table>
+    <gc-project-list-table></gc-project-list-table>
   </div>
 </template>
 
 <script>
 import { defineComponent } from '@vue/composition-api';
-import { useEmployeeList } from './hooks/use-employee-list';
+import { useProjectList }  from './hooks/use-project-list.js';
 import gcFilters           from '@/components/filters/filters.component.vue';
-import gcEmployeeListTable from './components/employee-list-table.component.vue';
+import gcProjectListTable  from './components/project-list-table.component.vue';
 
 export default defineComponent({
-  name: 'gcEmployeeList',
+  name: 'gcProjectList',
   components: {
     gcFilters,
-    gcEmployeeListTable,
+    gcProjectListTable,
   },
-
   setup() {
 
     const {
       valueInput,
       changeSearch,
-    } = useEmployeeList();
+    } = useProjectList();
 
     return {
       valueInput,
@@ -42,4 +41,5 @@ export default defineComponent({
 
 <style lang="scss"
        scoped>
+
 </style>

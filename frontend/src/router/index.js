@@ -3,6 +3,7 @@ import VueRouter      from 'vue-router';
 import Login          from '../views/login/login.view.vue';
 import MainContentApp from '../views/main-content-app/main-content-app.view.vue';
 import EmployeeList   from '../views/employee-list/employee-list.view.vue';
+import ProjectList    from '../views/project-list/project-list.view.vue';
 
 Vue.use(VueRouter);
 
@@ -21,7 +22,7 @@ const routes = [
       {
         path: 'projects-list',
         name: 'Projects list',
-        component: EmployeeList,
+        component: ProjectList,
       },
     ],
   },

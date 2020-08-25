@@ -22,10 +22,10 @@
         <div class="gc-employee-list-table__column__name">
 
           <img :alt="scope.row.lastName"
-               :src="scope.row.picture"
-               class="gc-employee-list-table__column__name__picture"
                :class="{'active' : scope.row.isActive,
-                        'inactive' : !scope.row.isActive}">
+                        'inactive' : !scope.row.isActive}"
+               :src="scope.row.picture"
+               class="gc-employee-list-table__column__name__picture">
 
           {{ scope.row.name }} {{ scope.row.lastName}}
         </div>
@@ -83,7 +83,7 @@
 
 <script>
 import { defineComponent } from '@vue/composition-api';
-import { useEmployeeList } from '../hooks/use-employeeList';
+import { useEmployeeList } from '../hooks/use-employee-list';
 import gcTable             from '@/components/table/table.component.vue';
 import gcTableColumn       from '@/components/table/table-column.component.vue';
 import gcBoxSort           from '../components/box-sort.component.vue';

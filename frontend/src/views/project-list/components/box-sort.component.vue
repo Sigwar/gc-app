@@ -12,7 +12,7 @@
 
 <script>
 import { defineComponent } from '@vue/composition-api';
-import { useEmployeeList } from '../hooks/use-employee-list';
+import { useProjectList }  from '../hooks/use-project-list';
 
 export default defineComponent({
   name: 'gcBoxSort',
@@ -22,7 +22,7 @@ export default defineComponent({
   setup() {
     const {
       sort,
-    } = useEmployeeList();
+    } = useProjectList();
 
     return {
       sort,
