@@ -20,6 +20,7 @@
   --blue: #3f55e2;
 
   --red: #D7382F;
+  --red-dark: #7c2420;
   --background-color: #F1F5F9;
   --black: #212121;
   --white: #ffffff;
@@ -29,13 +30,19 @@
 
   --gray-dark: #6A6A6A;
   --gray-light: #C0C4CC;
-  --font-color: #181818;
+  --font-color: #2d2d2d;
+
+  --input-background: #eff4f7;
 
   /* FONTS */
   --primary-font-family: 'Mulish', 'sans-serif';
   --secondary-font-family: 'Lobster', 'cursive';
 
   /* GENERAL VARIABLES */
+  --border-radius: 2px;
+  --box-shadow: 2px 6px 10px 0 rgba(106, 106, 106, 0.2);
+  --input-shadow: 1px 4px 8px 0 rgba(106, 106, 106, 0.15);
+  --nav-shadow: 1px 4px 8px 0 rgba(106, 106, 106, 0.1);
 
   /* FONT SIZES*/
   --font-light: 300;
@@ -49,5 +56,6 @@
   --mobile: 425px;
 
   /* ANIMATION */
-  --transition-offer-card: all .25s ease-in-out;
+  --transition: all .25s ease-in-out;
+  --cubic-bezier: all .55s cubic-bezier(0.43, -0.22, 0.25, 1.55);
 }

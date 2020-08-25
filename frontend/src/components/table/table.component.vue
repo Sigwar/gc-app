@@ -1,0 +1,60 @@
+<template>
+  <el-table class="gc-table"
+            v-bind="$attrs"
+            v-on="$listeners">
+
+    <slot :name="slot"
+          :slot="slot"
+          v-for="(_, slot) of $slots" />
+  </el-table>
+</template>
+
+<script>
+export default {
+  name: 'gcTable',
+};
+</script>
+
+<style lang="scss">
+.gc-table {
+  .el-table__header {
+    thead,
+    tbody {
+      tr {
+        th {
+          margin: 0;
+          padding-top: .1rem;
+          padding-bottom: .1rem;
+          border: none;
+          font-size: 1.7rem;
+          color: var(--font-color);
+
+          .cell {
+            padding: .5rem 1rem;
+            background: none;
+            max-height: 5rem;
+          }
+        }
+      }
+    }
+  }
+
+  .el-table__row {
+
+    td {
+      border: none;
+      padding-top: .1rem;
+      padding-bottom: .1rem;
+
+      .cell {
+        border: none;
+        margin: .5rem;
+        min-height: 4.5rem;
+        padding: 1rem;
+        font-size: 1.7rem;
+        color: var(--font-color);
+      }
+    }
+  }
+}
+</style>

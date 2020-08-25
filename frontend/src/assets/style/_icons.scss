@@ -1,1 +1,27 @@
-.icon {}
+.icon {
+
+  &-logout {
+    background: url("~@/assets/icons/logout/logout.svg") no-repeat center;
+    background-size: contain;
+  }
+
+  &-minus {
+    background: url("~@/assets/icons/minus/minus.svg") no-repeat center;
+    background-size: contain;
+  }
+
+  &-project {
+    background: url("~@/assets/icons/project/project.svg") no-repeat center;
+    background-size: contain;
+  }
+
+  &-user {
+    background: url("~@/assets/icons/user/user.svg") no-repeat center;
+    background-size: contain;
+  }
+
+  &-next {
+    background: url("~@/assets/icons/next/next.svg") no-repeat center;
+    background-size: contain;
+  }
+}
