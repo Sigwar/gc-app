@@ -34,5 +34,27 @@
       "topic": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
       "uuid": "HappyHands-Antologic-123"
     }
+  ],
+  "projectsEmployees": [
+    {
+      "name": "Rafał",
+      "lastName": "Krukowski",
+      "uuid": "rafal-krukowski-001"
+    },
+    {
+      "name": "Jan",
+      "lastName": "Kowalski",
+      "uuid": "jan-kowalski-001"
+    },
+    {
+      "name": "Andrzej",
+      "lastName": "Nowak",
+      "uuid": "andrzej-nowak-001"
+    },
+    {
+      "name": "Krzysztof",
+      "lastName": "Dragon-Wielki",
+      "uuid": "krzysztof-dragon-wielki-001"
+    }
   ]
 }

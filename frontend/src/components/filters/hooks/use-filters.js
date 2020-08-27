@@ -17,11 +17,16 @@ export const useFilters = (context) => {
     context.emit('change-search', value);
   };
 
+  const changeValueModal = () => {
+    context.emit('change-modal-state')
+  };
+
   return {
     search,
-    valueInput,
     checkboxes,
+    valueInput,
     isModalOpen,
+    changeValueModal,
     changeValueInput,
   };
 };

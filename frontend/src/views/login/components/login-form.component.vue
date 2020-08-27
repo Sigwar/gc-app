@@ -6,7 +6,7 @@
 
     <gc-form :model="loginForm"
              class="gc-login-form__form"
-             ref="__gcLoginForm">
+             ref="gcLoginForm">
 
       <gc-form-item class="gc-login-form__form__item"
                     label="Login"

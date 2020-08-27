@@ -22,17 +22,21 @@ export default {
   .el-input {
     .el-input__inner {
       background: var(--background);
-      border: 2px solid var(--blue);
+      border: 1px solid var(--gray-light) !important;
       border-radius: 0;
       width: 100%;
 
       &:hover {
-        border: 2px solid var(--blue);
+        border: 1px solid var(--primary-color) !important;
+      }
+
+      &:focus {
+        border: 1px solid var(--primary-color) !important;
       }
     }
 
     .el-input__suffix {
-      background: var(--blue);
+      background: var(--primary-color);
       right: 0;
       width: 4rem;
 
@@ -41,5 +45,8 @@ export default {
       }
     }
   }
+}
+.el-select-dropdown.is-multiple .el-select-dropdown__item.selected {
+  color: var(--primary-color) !important;
 }
 </style>

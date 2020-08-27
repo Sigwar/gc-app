@@ -11,7 +11,7 @@
 
 <script>
 export default {
-  name: 'gcDropdown',
+  name: 'gcButton',
 };
 </script>
 
@@ -23,13 +23,30 @@ export default {
     font-weight: bold !important;
     text-transform: uppercase;
     transition: .25s;
+
+    &:hover,
+    &:focus {
+      transition: .25s;
+      color: var(--grey-600) !important;
+      background: var(--primary-color) !important;
+    }
   }
 
-  &:hover,
-  &:focus {
+  &--info {
+    border: 2px solid var(--gray-light) !important;
+    background: var(--white) !important;
+    color: var(--gray-light) !important;
+    border-radius: 0 !important;
+    font-weight: bold !important;
+    text-transform: uppercase;
     transition: .25s;
-    color: var(--grey-600) !important;
-    background: var(--primary-color) !important;
+
+    &:hover,
+    &:focus {
+      transition: .25s;
+      color: var(--white) !important;
+      background: var(--gray-light) !important;
+    }
   }
 }
 

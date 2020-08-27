@@ -2,9 +2,20 @@ import axios from 'axios';
 
 const state = {
   projects: [],
+  isModalOpen: false,
   sort: {
     sortBy: 'NAME',
     direction: 'ASC',
+  },
+  employees: [],
+  newProjectForm: {
+    name: '',
+    client: '',
+    dateStart: '',
+    dateEnd: '',
+    topic: '',
+    description: '',
+    employees: [],
   },
 };
 
@@ -16,6 +27,15 @@ const getters = {
   sort: (state) => {
     return state.sort;
   },
+  isModalOpen: (state) => {
+    return state.isModalOpen;
+  },
+  newProjectForm: (state) => {
+    return state.newProjectForm;
+  },
+  employees: (state) => {
+    return state.employees;
+  },
 };
 
 //actions
@@ -24,6 +44,23 @@ const actions = {
     try {
       const { data } = await axios.get('http://localhost:3000/projects');
       commit('setProjects', data);
+    } catch (e) {
+      console.log('e: ', e);
+    }
+  },
+  async getEmployees({ commit }) {
+    try {
+      const { data } = await axios.get('http://localhost:3000/projectsEmployees');
+      commit('setEmployees', data);
+    } catch (e) {
+      console.log('e: ', e);
+    }
+  },
+  async createNewProject({ commit }) {
+    try {
+      // await axios.get('http://localhost:3000/projectsEmployees');
+      commit('resetForm');
+      commit('setModal');
     } catch (e) {
       console.log('e: ', e);
     }
@@ -41,6 +78,26 @@ const mutations = {
     } else {
       state.sort.sortBy = payload;
     }
+  },
+  setModal: (state) => {
+    state.isModalOpen = !state.isModalOpen;
+  },
+  setNewProjectForm: (state, payload) => {
+    state.newProjectForm = payload;
+  },
+  setEmployees: (state, payload) => {
+    state.employees = payload;
+  },
+  resetForm: (state) => {
+    state.newProjectForm = {
+      name: '',
+      client: '',
+      dateStart: '',
+      dateEnd: '',
+      topic: '',
+      description: '',
+      employees: [],
+    };
   },
 };
 

@@ -27,7 +27,8 @@
     <div class="gc-filters__button"
          v-if="showButton">
 
-      <gc-button>{{ buttonLabel }}</gc-button>
+      <gc-button @click="changeValueModal"
+                 type="default">{{ buttonLabel }}</gc-button>
     </div>
   </div>
 </template>
@@ -58,6 +59,7 @@ export default defineComponent({
       checkboxes,
       valueInput,
       isOpenModal,
+      changeValueModal,
       changeValueInput,
     } = useFilters(context);
 
@@ -65,6 +67,7 @@ export default defineComponent({
       valueInput,
       checkboxes,
       isOpenModal,
+      changeValueModal,
       changeValueInput,
     };
   },

@@ -18,6 +18,7 @@ export default {
 <style lang="scss">
 .gc-input {
 
+  .el-textarea__inner,
   .el-input__inner {
     border: 1px solid var(--gray-light);
     border-radius: 0;
