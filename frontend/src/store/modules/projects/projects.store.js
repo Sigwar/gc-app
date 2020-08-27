@@ -3,6 +3,8 @@ import axios from 'axios';
 const state = {
   projects: [],
   isModalOpen: false,
+  isDeleteModal: false,
+  projectToDelete: {},
   sort: {
     sortBy: 'NAME',
     direction: 'ASC',
@@ -30,11 +32,17 @@ const getters = {
   isModalOpen: (state) => {
     return state.isModalOpen;
   },
+  isDeleteModal: (state) => {
+    return state.isDeleteModal;
+  },
   newProjectForm: (state) => {
     return state.newProjectForm;
   },
   employees: (state) => {
     return state.employees;
+  },
+  projectToDelete: (state) => {
+    return state.projectToDelete;
   },
 };
 
@@ -65,6 +73,15 @@ const actions = {
       console.log('e: ', e);
     }
   },
+  async deleteProject({ commit }) {
+    try {
+      // await axios.get('http://localhost:3000/projectsEmployees');
+      commit('setDeleteModal');
+      commit('resetProjectToDelete');
+    } catch (e) {
+      console.log('e: ', e);
+    }
+  },
 };
 
 //mutations
@@ -82,6 +99,9 @@ const mutations = {
   setModal: (state) => {
     state.isModalOpen = !state.isModalOpen;
   },
+  setDeleteModal: (state) => {
+    state.isDeleteModal = !state.isDeleteModal;
+  },
   setNewProjectForm: (state, payload) => {
     state.newProjectForm = payload;
   },
@@ -98,6 +118,12 @@ const mutations = {
       description: '',
       employees: [],
     };
+  },
+  setProjectToDelete: (state, payload) => {
+    state.projectToDelete = payload;
+  },
+  resetProjectToDelete: (state) => {
+    state.projectToDelete = {};
   },
 };
 

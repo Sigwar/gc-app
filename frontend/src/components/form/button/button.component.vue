@@ -48,6 +48,23 @@ export default {
       background: var(--gray-light) !important;
     }
   }
+
+  &--danger {
+    border: 2px solid var(--error) !important;
+    background: var(--white) !important;
+    color: var(--error) !important;
+    border-radius: 0 !important;
+    font-weight: bold !important;
+    text-transform: uppercase;
+    transition: .25s;
+
+    &:hover,
+    &:focus {
+      transition: .25s;
+      color: var(--white) !important;
+      background: var(--error) !important;
+    }
+  }
 }
 
 .el-button + .el-button {
