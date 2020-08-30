@@ -17,6 +17,11 @@ export default {
 
 <style lang="scss">
 .gc-dialog {
+
+  .el-dialog {
+    margin-top: 10rem !important;
+  }
+
   .el-dialog__header {
     padding: 0;
   }

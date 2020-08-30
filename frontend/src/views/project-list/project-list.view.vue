@@ -22,9 +22,9 @@ import { defineComponent } from '@vue/composition-api';
 import { useProjectList }  from './hooks/use-project-list.js';
 import store               from '@/store/store';
 import gcFilters           from '@/components/filters/filters.component.vue';
-import gcNewProjectModal   from './components/new-project-modal.component.vue';
+import gcNewProjectModal   from './components/project-modal.component.vue';
 import gcProjectListTable  from './components/project-list-table.component.vue';
-import gcDeleteModal from './components/delete-modal.component.vue'
+import gcDeleteModal       from './components/delete-modal.component.vue'
 
 export default defineComponent({
   name: 'gcProjectList',

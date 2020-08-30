@@ -30,7 +30,10 @@ export default defineComponent({
     const {
       valueInput,
       changeSearch,
+      employeesList
     } = useEmployeeList();
+
+    employeesList();
 
     return {
       valueInput,

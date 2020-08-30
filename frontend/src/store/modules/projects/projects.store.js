@@ -1,20 +1,20 @@
 import axios from 'axios';
 
 const state = {
-  projects: [],
   isModalOpen: false,
   isDeleteModal: false,
+  isEditMode: false,
   projectToDelete: {},
+  projects: [],
+  employees: [],
   sort: {
     sortBy: 'NAME',
     direction: 'ASC',
   },
-  employees: [],
-  newProjectForm: {
+  projectForm: {
     name: '',
     client: '',
-    dateStart: '',
-    dateEnd: '',
+    date: [],
     topic: '',
     description: '',
     employees: [],
@@ -35,8 +35,11 @@ const getters = {
   isDeleteModal: (state) => {
     return state.isDeleteModal;
   },
-  newProjectForm: (state) => {
-    return state.newProjectForm;
+  isEditMode: (state) => {
+    return state.isEditMode;
+  },
+  projectForm: (state) => {
+    return state.projectForm;
   },
   employees: (state) => {
     return state.employees;
@@ -56,6 +59,15 @@ const actions = {
       console.log('e: ', e);
     }
   },
+  async getProjectDetail({ commit }, payload) {
+    try {
+      const { data } = await axios.get('http://localhost:3000/projectDetail', payload);
+      commit('setProjectForm', data);
+      commit('setModal');
+    } catch (e) {
+      console.log('e: ', e);
+    }
+  },
   async getEmployees({ commit }) {
     try {
       const { data } = await axios.get('http://localhost:3000/projectsEmployees');
@@ -67,6 +79,15 @@ const actions = {
   async createNewProject({ commit }) {
     try {
       // await axios.get('http://localhost:3000/projectsEmployees');
+      commit('resetForm');
+      commit('setModal');
+    } catch (e) {
+      console.log('e: ', e);
+    }
+  },
+  async updateProject({ commit }) {
+    try {
+      // await axios.post('URL', state.projectForm)
       commit('resetForm');
       commit('setModal');
     } catch (e) {
@@ -99,17 +120,20 @@ const mutations = {
   setModal: (state) => {
     state.isModalOpen = !state.isModalOpen;
   },
+  setEditMode: (state, payload) => {
+    state.isEditMode = payload;
+  },
   setDeleteModal: (state) => {
     state.isDeleteModal = !state.isDeleteModal;
   },
-  setNewProjectForm: (state, payload) => {
-    state.newProjectForm = payload;
+  setProjectForm: (state, payload) => {
+    state.projectForm = payload;
   },
   setEmployees: (state, payload) => {
     state.employees = payload;
   },
   resetForm: (state) => {
-    state.newProjectForm = {
+    state.projectForm = {
       name: '',
       client: '',
       dateStart: '',

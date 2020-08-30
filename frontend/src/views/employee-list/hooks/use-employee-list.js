@@ -2,7 +2,10 @@ import { computed, ref } from '@vue/composition-api';
 import store             from '@/store/store';
 
 export const useEmployeeList = () => {
-  store.dispatch('employeesModule/getEmployees');
+
+  const employeesList = () =>{
+    store.dispatch('employeesModule/getEmployees');
+  };
 
   const valueInput = ref('');
 
@@ -22,6 +25,6 @@ export const useEmployeeList = () => {
     setSort,
     employees,
     valueInput,
-    changeSearch,
+    changeSearch,employeesList
   };
 };

@@ -26,6 +26,7 @@ export default {
 <style lang="scss"
        scoped>
 .gc-main-content-app {
+  width: 10rem;
   display: grid;
   grid-template-columns: 10.3rem auto;
   grid-template-rows: 7.9rem auto;
@@ -37,6 +38,7 @@ export default {
     grid-row-start: 2;
     grid-row-end: 3;
     padding: 2.9rem 7.1rem;
+    width: calc(100vw - 11rem);
   }
 }
 </style>

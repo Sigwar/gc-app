@@ -27,11 +27,11 @@ export default {
       width: 100%;
 
       &:hover {
-        border: 1px solid var(--primary-color) !important;
+        border: 1px solid var(--warning) !important;
       }
 
       &:focus {
-        border: 1px solid var(--primary-color) !important;
+        border: 1px solid var(--warning) !important;
       }
     }
 
