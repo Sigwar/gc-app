@@ -16,10 +16,11 @@ export default {
 </script>
 
 <style lang="scss">
-.gc-upload {
-  .el-upload {
-    width: 100%;
-    height: 100%;
-  }
+.el-upload {
+  height: 100%;
+  width: 100%;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
 }
 </style>

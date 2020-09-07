@@ -5,7 +5,12 @@
     <gc-aside-bar />
 
     <main class="gc-main-content-app__content">
-      <router-view />
+
+      <transition name="slide-fade"
+                  mode="out-in">
+
+        <router-view />
+      </transition>
     </main>
   </div>
 </template>
@@ -25,6 +30,18 @@ export default {
 
 <style lang="scss"
        scoped>
+.slide-fade-enter-active {
+  transition: var(--transition);
+}
+.slide-fade-leave-active {
+  transition: var(--transition);
+}
+.slide-fade-enter, .slide-fade-leave-to
+  /* .slide-fade-leave-active below version 2.1.8 */ {
+  transform: translateX(1.7rem);
+  opacity: 0;
+}
+
 .gc-main-content-app {
   width: 10rem;
   display: grid;

@@ -17,6 +17,10 @@ export default {
 
 <style lang="scss">
 .gc-option {
-
+  &.selected {
+    &.el-select-dropdown__item {
+      color: var(--primary-color);
+    }
+  }
 }
 </style>

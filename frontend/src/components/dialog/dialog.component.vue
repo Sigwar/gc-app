@@ -19,7 +19,7 @@ export default {
 .gc-dialog {
 
   .el-dialog {
-    margin-top: 10rem !important;
+    margin-top: 4.3rem !important;
   }
 
   .el-dialog__header {

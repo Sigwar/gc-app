@@ -19,6 +19,30 @@
       "uuid": "jan-kowalski-001"
     }
   ],
+  "projectsList": [
+    {
+      "label": "PROrms",
+      "uuid": "PROrms-QualPRO-123"
+    },
+    {
+      "label": "Happy Hands",
+      "uuid": "HappyHands-Antologic-123"
+    }
+  ],
+  "knowledgeTags": [
+    "JAVA",
+    "VUE.JS",
+    "HTML5",
+    "CSS3",
+    "SASS",
+    "SPRING",
+    "GIT",
+    "FIGMA",
+    "NPM",
+    "JAVASCRIPT",
+    "HIBERNATE",
+    "POSTGRESQL"
+  ],
   "projects": [
     {
       "name": "PROrms",
@@ -37,48 +61,33 @@
   ],
   "projectsEmployees": [
     {
-      "name": "Rafał",
-      "lastName": "Krukowski",
-      "uuid": "rafal-krukowski-001"
-    },
-    {
-      "name": "Jan",
-      "lastName": "Kowalski",
+      "label": "Jan Kowalski",
       "uuid": "jan-kowalski-001"
     },
     {
-      "name": "Andrzej",
-      "lastName": "Nowak",
+      "label": "Andrzej nowak",
       "uuid": "andrzej-nowak-001"
     },
     {
-      "name": "Krzysztof",
-      "lastName": "Dragon-Wielki",
+      "label": "Krzysztof Dragon",
       "uuid": "krzysztof-dragon-wielki-001"
+    },
+    {
+      "label": "Rafal Krukowski",
+      "uuid": "rafal-krukowski-001"
     }
   ],
   "projectDetail": {
     "name": "PROrms",
     "client": "Antologic",
-    "date": ["2019-03", "2020-07"],
+    "date": [
+      "2019-03",
+      "2020-07"
+    ],
     "topic": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
     "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt",
     "employees": [
-      {
-        "name": "Rafał",
-        "lastName": "Krukowski",
-        "uuid": "rafal-krukowski-001"
-      },
-      {
-        "name": "Jan",
-        "lastName": "Kowalski",
-        "uuid": "jan-kowalski-001"
-      },
-      {
-        "name": "Andrzej",
-        "lastName": "Nowak",
-        "uuid": "andrzej-nowak-001"
-      }
+      "rafal-krukowski-001"
     ]
   }
 }
